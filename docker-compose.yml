@@ -1,0 +1,10 @@
+version: '2'
+services:
+    notebook:
+      image: jupyter/scipy-notebook:latest
+      command: start-notebook.sh --NotebookApp.password='' --NotebookApp.token=''
+      ports: 
+        - 8888:8888
+      volumes:
+        - ./notebooks:/home/jovyan/work
+        - ./data:/home/jovyan/data
